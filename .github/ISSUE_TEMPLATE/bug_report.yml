@@ -15,70 +15,42 @@ body:
       label: Описание дефекта
       description: Подготовьте скриншоты и фрагменты лога заранее. Для описания дефекта воспользуйтесь указанным ниже шаблоном.
       value: "**Стенд**
-      
-* Название стенда
+
+              * Название стенда
 
 
-**Версия ПО**
+              **Версия ПО**
 
-* Версия SUT
-
-
-**Предусловие:**
-
-* Описание предусловия
-
-* Описание предусловия
+              * Версия SUT
 
 
-**Шаги:**
+              **Предусловие:**
 
-# Шаг №1
+              * Описание предусловия
 
-# Шаг №2
-
-
-**Ожидаемый результат:**
-
-* Описание ОР
+              * Описание предусловия
 
 
-**Фактический результат:**
+              **Шаги:**
 
-* Описание ФР"
+              # Шаг №1
+
+              # Шаг №2
+
+
+              **Ожидаемый результат:**
+
+              * Описание ОР
+
+
+              **Фактический результат:**
+
+              * Описание ФР"
     validations:
       required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
   - type: textarea
     id: logs
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      label: Фрагмент лога (если есть)
+      description: Здесь только фрагмент лога, с указанием ошибки или других событий, которые помогут программисту.
       render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
