@@ -1,29 +1,36 @@
-name: Bug Report
-description: File a bug report
+name: Отчет о дефекте
+description: Шаблон-форма отчета о дефекте
 title: "[Bug]: "
-labels: ["bug", "triage"]
+labels: ["bug"]
 assignees:
-  - octocat
+  - netkitgit
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
+        Заголовок заполняется по формуле "ЧТО. ГДЕ. КОГДА.". По-возможности заполните все поля
   - type: textarea
-    id: what-happened
+    id: bug-description
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Описание дефекта:
+      description: Подготовьте скриншоты и фрагменты лога заранее. Для описания дефекта воспользуйтесь указанным ниже шаблоном.
+      value: "# Заголовок тест-кейса
+
+**Предусловие:**
+* Предусловие №1
+* Предусловие №2
+* итд
+
+**Шаги:**
+# Шаг №1
+# Шаг №2
+# итд
+
+**Ожидаемый результат:**
+* Описание ОР
+
+**Покрытые требования**
+REQ: 1.5; 3.8.1; 7.1;"
     validations:
       required: true
   - type: dropdown
